@@ -1,0 +1,12 @@
+#
+# This file is managed by Puppet, all local changes will be overwritten
+#
+<%- @rules.keys.each do |key| -%>
+# Name/Key: <%= key %>
+# Description: <%= @rules[key]['description'] %>
+# Rules:
+<%- @rules[key]['rules'].each do |rule| -%>
+<%= rule %>
+<%- end -%>
+
+<%- end -%>
